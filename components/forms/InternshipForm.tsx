@@ -27,6 +27,7 @@ const formSchema = z.object({
   stipend: z.string().min(2, "Stipend must be at least 2 characters").max(50),
   description: z.string().min(10, "Description must be at least 10 characters"),
   type: z.string().min(2, "Type must be at least 2 characters").max(50),
+  link: z.string().min(2),
 })
 
 export function InternshipForm() {
@@ -41,6 +42,7 @@ export function InternshipForm() {
       stipend: "",
       description: "",
       type: "",
+      link: "",
     },
   })
 
@@ -166,6 +168,19 @@ export function InternshipForm() {
                       className="h-32"
                       {...field}
                     />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="link"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Link</FormLabel>
+                  <FormControl>
+                    <Input placeholder="https://example.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -8,6 +8,7 @@ export interface Internship {
     description: string
     type: string
     created_at: string
+    link: string
   }
   
   export interface Hackathon {
@@ -19,6 +20,7 @@ export interface Internship {
     image_url: string
     tags: string[]
     created_at: string
+    link: string
   }
   
   export interface Scholarship {
@@ -28,6 +30,7 @@ export interface Internship {
     description: string
     icon: string
     created_at: string
+    link: string
   }
   
   export interface Contact {

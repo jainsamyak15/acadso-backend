@@ -18,12 +18,14 @@ import { Textarea } from "../ui/textarea"
 import { useToast } from "../ui/use-toast"
 import { supabase } from "../../lib/supabase"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
+import { link } from "fs"
 
 const formSchema = z.object({
   title: z.string().min(2).max(100),
   amount: z.string().min(2).max(50),
   description: z.string().min(10),
-  icon: z.string().url(),
+  icon: z.string().min(2),
+  link: z.string().min(2),
 })
 
 export function ScholarshipForm() {
@@ -35,6 +37,7 @@ export function ScholarshipForm() {
       amount: "",
       description: "",
       icon: "",
+      link: "",
     },
   })
 
@@ -118,7 +121,20 @@ export function ScholarshipForm() {
                 <FormItem>
                   <FormLabel>Icon URL</FormLabel>
                   <FormControl>
-                    <Input placeholder="https://example.com/icon.png" {...field} />
+                    <Input placeholder="fas fa-laptop-code" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="link"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Link</FormLabel>
+                  <FormControl>
+                    <Input placeholder="https://example.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

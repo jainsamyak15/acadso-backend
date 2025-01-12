@@ -24,8 +24,9 @@ const formSchema = z.object({
   description: z.string().min(10),
   date: z.string(),
   location: z.string().min(2).max(100),
-  image_url: z.string().url(),
+  image_url: z.string().min(2),
   tags: z.string().transform(str => str.split(',').map(s => s.trim())).default(""),
+  link: z.string().min(2),
 })
 
 export function HackathonForm() {
@@ -39,6 +40,7 @@ export function HackathonForm() {
       location: "",
       image_url: "",
       tags: [] as string[],
+      link: "",
     },
   })
 
@@ -151,6 +153,19 @@ export function HackathonForm() {
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
                     <Input placeholder="AI, Web3, Blockchain" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="link"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Link</FormLabel>
+                  <FormControl>
+                    <Input placeholder="https://example.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
