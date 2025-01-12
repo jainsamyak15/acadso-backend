@@ -148,7 +148,7 @@ export function InternshipForm() {
                 <FormItem>
                   <FormLabel>Type</FormLabel>
                   <FormControl>
-                    <Input placeholder="Full-time/Part-time" {...field} />
+                    <Input placeholder="industrial/research" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
