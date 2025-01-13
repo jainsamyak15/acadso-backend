@@ -28,8 +28,8 @@ export function Navbar() {
             </motion.h1>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-gray-300 hover:text-white" onClick={() => handleNavigation('/')}>Home</Button>
-            <Button variant="ghost" className="text-gray-300 hover:text-white" onClick={() => handleNavigation('/about')}>About</Button>
+            <Button variant="ghost" className="text-gray-300 hover:text-black" onClick={() => handleNavigation('/')}>Home</Button>
+            <Button variant="ghost" className="text-gray-300 hover:text-black" onClick={() => handleNavigation('/about')}>About</Button>
             <Button className="bg-indigo-500 hover:bg-indigo-600 text-white" onClick={() => handleNavigation('/')}>Sign In</Button>
             <Button
               className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform hover:scale-105"
