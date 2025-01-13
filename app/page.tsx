@@ -82,7 +82,7 @@ export default function Home() {
                                         <User className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                                     </motion.div>
                                 </div>
-                                <h2 className="text-white text-2xl sm:text-3xl font-bold text-center mt-4">
+                                <h2 className="text-black text-2xl sm:text-3xl font-bold text-center mt-4">
                                     Admin Login
                                 </h2>
                                 <p className="text-white/80 text-center mt-2 text-sm sm:text-base">
@@ -99,7 +99,7 @@ export default function Home() {
                                         </label>
                                         <div className="relative">
                                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                                <Mail className="h-5 w-5 text-gray-400" />
+                                                
                                             </div>
                                             <Input
                                                 type="email"
@@ -118,7 +118,7 @@ export default function Home() {
                                         </label>
                                         <div className="relative">
                                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                                <Lock className="h-5 w-5 text-gray-400" />
+                                                
                                             </div>
                                             <Input
                                                 type="password"
@@ -144,7 +144,7 @@ export default function Home() {
                                     <Button
                                         type="submit"
                                         disabled={isLoading}
-                                        className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-2.5 rounded-md transition-all duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-sm sm:text-base h-auto"
+                                        className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-2 rounded-md transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                     >
                                         {isLoading ? (
                                             <div className="flex items-center justify-center">

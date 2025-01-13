@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
 
@@ -11,8 +12,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-blue-400">Home</Link></li>
               <li><Link href="/about" className="hover:text-blue-400">About</Link></li>
-              <li><Link href="www.acadso.tech/applications" className="hover:text-blue-400">Mentorship</Link></li>
-              <li><Link href="www.acadso.tech/resources" className="hover:text-blue-400">Resources</Link></li>
+              <li><Link href="#" onClick={() => window.open('https://www.acadso.tech/applications', '_blank')} className="hover:text-blue-400">Mentorship</Link></li>
+              <li><Link href="#" onClick={() => window.open('https://www.acadso.tech/resources', '_blank')}className="hover:text-blue-400">Resources</Link></li>
             </ul>
           </div>
           <div>
@@ -20,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>Email: <a href="mailto:contact@acadso.com" className="hover:text-blue-400">contact@acadso.com</a></li>
               <li>Phone: (123) 456-7890</li>
-              <li><Link href="www.acadso.tech/contact" className="hover:text-blue-400">Reach Out To Us</Link></li>
+              <li><Link href="#" onClick={() => window.open('https://www.acadso.tech/contact', '_blank')} className="hover:text-blue-400">Reach Out To Us</Link></li>
             </ul>
           </div>
           <div>
