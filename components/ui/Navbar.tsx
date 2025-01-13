@@ -28,9 +28,9 @@ export function Navbar() {
             </motion.h1>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-gray-300 hover:text-black" onClick={() => handleNavigation('/')}>Home</Button>
-            <Button variant="ghost" className="text-gray-300 hover:text-black" onClick={() => handleNavigation('/about')}>About</Button>
-            <Button className="bg-indigo-500 hover:bg-indigo-600 text-white" onClick={() => handleNavigation('/')}>Sign In</Button>
+            <Button variant="ghost" className="text-gray-300 hover:text-white" onClick={() => handleNavigation('/')}>Home</Button>
+            <Button variant="ghost" className="text-gray-300 hover:text-white" onClick={() => handleNavigation('/about')}>About</Button>
+            <Button className="bg-indigo-500 hover:bg-indigo-600 text-white" onClick={() => handleNavigation('/signin')}>Sign In</Button>
             <Button
               className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform hover:scale-105"
               onClick={() => window.open('https://www.acadso.tech', '_blank')}
@@ -40,7 +40,7 @@ export function Navbar() {
           </div>
           <div className="flex items-center md:hidden">
             <Button variant="ghost" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-white" />}
             </Button>
           </div>
         </div>
@@ -54,9 +54,9 @@ export function Navbar() {
             className="md:hidden border-t border-white/10 backdrop-blur-md bg-black"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Button variant="ghost" className="w-full text-left text-gray-300 hover:text-black hover:bg-white/10" onClick={() => handleNavigation('/')}>Home</Button>
-              <Button variant="ghost" className="w-full text-left text-gray-300 hover:text-black hover:bg-white/10" onClick={() => handleNavigation('/about')}>About</Button>
-              <Button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white" onClick={() => handleNavigation('/')}>Sign In</Button>
+              <Button variant="ghost" className="w-full text-left text-gray-300 hover:text-white hover:bg-white/10" onClick={() => handleNavigation('/')}>Home</Button>
+              <Button variant="ghost" className="w-full text-left text-gray-300 hover:text-white hover:bg-white/10" onClick={() => handleNavigation('/about')}>About</Button>
+              <Button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white" onClick={() => handleNavigation('/signin')}>Sign In</Button>
               <Button
                 className="w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform hover:scale-105"
                 onClick={() => window.open('https://www.acadso.tech', '_blank')}
